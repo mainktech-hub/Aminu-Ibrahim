@@ -1,0 +1,6 @@
+{
+  "name": "MAINK TECH",
+  "description": "Futuristic high-converting website for MAINK TECH computer gadgets",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Orbitron:wght@400..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --cyan: #38bdf8; /* Elegant Pretty & Compassionate Sky Blue 💙 Initiates Tech */
+  --amber: #ffd700; /* Ultra-vibrant Neon Cyber Gold */
+  --bg-dark: #040914; /* Deep Space Slate Blue Void */
+  --bg-darker: #02040a; /* Deepest Forest Obsidian shade accents */
+  --bg-card: #081220; /* Metallic Blue/Teal Premium card background */
+  --border-color: #162a3d; /* Fine Deep Bounding lines matching light blue tones */
+  --text-color: #ffffff;
+  --text-color-muted: #94abcc;
+}
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-bebas: "Bebas Neue", sans-serif;
+  
+  --color-cyber-cyan: var(--cyan);
+  --color-cyber-amber: var(--amber);
+  --color-cyber-dark: var(--bg-dark);
+  --color-cyber-darker: var(--bg-darker);
+  --color-cyber-card: var(--bg-card);
+  --color-cyber-border: var(--border-color);
+  --color-text-primary: var(--text-color);
+  --color-text-secondary: var(--text-color-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--color-cyber-dark);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+/* Premium Light Theme & Cozy Obsidian Dark Theme Color Systems */
+body.light {
+  --cyan: #0284c7; /* Elegant Tech Light Blue 💙 */
+  --amber: #d97706; /* Polished deep cyber gold / ochre */
+  --bg-dark: #f0f9ff; /* Elegant soft sky blue whitespace studio */
+  --bg-darker: #e0f2fe; /* Light fresh sky blue mint background accents */
+  --bg-card: #ffffff; /* Crisp pristine white for product cards and panels */
+  --border-color: #bae6fd; /* Light sky blue bordered accents */
+  --text-color: #0369a1; /* Sophisticated deep ocean blue for high readability */
+  --text-color-muted: #0284c7; /* Muted sky blue slate labels */
+  background-color: #f0f9ff !important;
+  color: #0369a1 !important;
+}
+
+body.light table th {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+body.light table td {
+  border-color: #f1f5f9 !important;
+  color: #334155 !important;
+}
+
+body.light ::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+body.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border: 1px solid #94a3b8;
+}
+
+body.light .text-white {
+  color: #0f172a !important;
+}
+
+body.light .text-gray-300,
+body.light .text-gray-400 {
+  color: #334155 !important;
+}
+
+body.light .text-gray-500 {
+  color: #64748b !important;
+}
+
+body.light .bg-black {
+  background-color: #ffffff !important;
+}
+
+body.light .bg-[#040406],
+body.light .bg-[#080808],
+body.light .bg-[#0C0C0C],
+body.light .bg-[#0D0D0D],
+body.light .bg-[#0F0F0F],
+body.light .bg-[#111111],
+body.light .bg-[#111],
+body.light .bg-[#141414] {
+  background-color: #ffffff !important;
+}
+
+body.light .bg-[#0D0D0D]/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+body.light .border-b,
+body.light .border-l,
+body.light .border-t,
+body.light .border,
+body.light .border-gray-800,
+body.light .border-[#1E1E1E],
+body.light .border-[#1A1A1A],
+body.light .border-[#1B1B1B],
+body.light .border-[#1C1C1C],
+body.light .border-[#222] {
+  border-color: #e2e8f0 !important;
+}
+
+body.light .text-cyber-cyan {
+  color: #0ea5e9 !important; /* Beautiful sky tech light blue 💙 for high readability on pristine white */
+}
+
+body.light .bg-cyber-cyan {
+  background-color: #0f172a !important; /* Elegant slate button for high-contrast CTA */
+  color: #ffffff !important;
+  border: 1px solid #0f172a !important;
+}
+
+body.light .text-cyber-amber {
+  color: #b45309 !important; /* Polished deep gold */
+}
+
+body.light .bg-cyber-amber/20 {
+  background-color: rgba(234, 88, 12, 0.08) !important;
+}
+
+body.light .bg-cyber-cyan/10 {
+  background-color: rgba(2, 132, 199, 0.08) !important;
+}
+
+body.light .bg-[#09090D]/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.light .bg-white/5 {
+  background-color: #f1f5f9 !important;
+}
+
+body.light .hover:bg-white/5:hover {
+  background-color: #e2e8f0 !important;
+}
+
+body.light .bg-gradient-to-b,
+body.light .bg-gradient-to-t,
+body.light .bg-gradient-to-r {
+  background-image: none !important;
+  background-color: #ffffff !important;
+}
+
+body.light .noise-overlay {
+  opacity: 0.01 !important;
+}
+
+body.light .shadow-2xl {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.08) !important;
+}
+
+body.light .neon-glow-cyan-hover:hover {
+  box-shadow: 0 0 0 2px #0ea5e9 !important;
+}
+
+body.light .perspective-grid {
+  opacity: 0.04 !important;
+}
+
+body.light .grid-lines {
+  background-image: 
+    linear-gradient(to right, #0ea5e9 1px, transparent 1px),
+    linear-gradient(to bottom, #0ea5e9 1px, transparent 1px);
+}
+
+
+/* Custom scrollbar to match futuristic brand */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cyber-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-cyber-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyber-cyan);
+}
+
+/* perspective moving grid */
+.perspective-grid {
+  perspective: 250px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.grid-lines {
+  background-image: 
+    linear-gradient(to right, var(--color-cyber-cyan) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-cyber-cyan) 1px, transparent 1px);
+  background-size: 60px 60px;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  transform: rotateX(65deg);
+  transform-origin: center center;
+  animation: gridMove 2s linear infinite;
+  will-change: transform;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: rotateX(65deg) translateY(0);
+  }
+  100% {
+    transform: rotateX(65deg) translateY(60px);
+  }
+}
+
+/* Headline letter animation */
+.letter-anim {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) skewY(4deg);
+  filter: blur(4px);
+  animation: letterReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) skewY(4deg);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) skewY(0deg);
+    filter: blur(0);
+  }
+}
+
+/* floating product animation */
+.floating-asset {
+  animation: mainkFloat 3.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes mainkFloat {
+  0% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+/* subtle pulsing scarcity */
+.scarcity-pulse {
+  box-shadow: 0 0 0 0 var(--color-cyber-amber);
+  animation: sPulse 1.8s infinite;
+}
+
+@keyframes sPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 127, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 0, 127, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 127, 0);
+  }
+}
+
+/* Neon glow for cyan hover clicks */
+.neon-glow-cyan {
+  box-shadow: 0 0 15px var(--color-cyber-cyan);
+}
+
+.neon-glow-cyan-hover:hover {
+  box-shadow: 0 0 25px var(--color-cyber-cyan);
+}
+
+/* Custom clip paths */
+.diagonal-amber-strike {
+  clip-path: polygon(0 15%, 100% 45%, 100% 50%, 0 20%);
+  background-color: var(--color-cyber-amber);
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Image Noise texture overlay */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+/* Horizontal marquee */
+.marquee-row {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-stream {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 2rem;
+  animation: marqueeShift 20s linear infinite;
+  will-change: transform;
+}
+
+.marquee-row:hover .marquee-stream {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeShift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Zoom on hover styling helper */
+.zoom-container {
+  overflow: hidden;
+}
+.zoom-image {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zoom-container:hover .zoom-image {
+  transform: scale(1.15);
+}
+
+/* Slide in add to cart button */
+.product-card-btn {
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:hover .product-card-btn {
+  transform: translateY(0);
+}
